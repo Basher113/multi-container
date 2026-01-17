@@ -17,7 +17,7 @@ jobs:
 
       - name: Run tests
         run: |
-          docker build -t basher113/react-test -f ./client/Dockerfile.dev ./client
+          docker build -t basher113/react-test -f client/Dockerfile.dev client
           docker run -e CI=true basher113/react-test npm test
 
       - name: Build images
